@@ -1,13 +1,10 @@
 import SwiftUI
 import shared
 
-func greet() -> String {
-    return Greeting().greeting()
-}
 
 struct ContentView: View {
     var body: some View {
-        Text(greet())
+        Text("3 달라는 엔화로" + String(ExchangeMoney(baseDollor: 3.0).toYen()))
     }
 }
 

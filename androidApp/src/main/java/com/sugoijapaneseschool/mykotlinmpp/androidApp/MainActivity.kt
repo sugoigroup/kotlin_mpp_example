@@ -2,12 +2,9 @@ package com.sugoijapaneseschool.mykotlinmpp.androidApp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sugoijapaneseschool.mykotlinmpp.shared.Greeting
 import android.widget.TextView
+import com.sugoijapaneseschool.mykotlinmpp.shared.ExchangeMoney
 
-fun greet(): String {
-    return Greeting().greeting()
-}
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val tv: TextView = findViewById(R.id.text_view)
-        tv.text = greet()
+        tv.text = ("3 달라는 한국돈으로 " + ExchangeMoney(3.0).toWon())
+
     }
 }
